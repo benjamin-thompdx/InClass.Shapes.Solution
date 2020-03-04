@@ -4,9 +4,9 @@ namespace Shapes.Models
   {
     public Rectangle Face { get; set; }
 
-    public Cube (Rectangle side)
+    public Cube (Rectangle sideCube)
     {
-      Face = side;
+      Face = sideCube;
     }
     public int GetVolume()
     {
