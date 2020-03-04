@@ -1,0 +1,33 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Shapes.Models;
+
+namespace Shapes.Tests
+{
+  [TestClass]
+  public class CubeTests
+  {
+
+    [TestMethod]
+    public void Cube_GetVolume_VolumeOfCube()
+    {
+      // ARRANGE
+      Rectangle newRectangle = new Rectangle(4, 4);
+      Cube newCube = new Cube(newRectangle);
+      // ACT
+      int result = newCube.GetVolume();
+      // ASSERT
+      Assert.AreEqual(result, 64);
+    }
+    [TestMethod]
+    public void Cube_GetSurfaceArea_SurfaceAreaOfCube()
+    {
+      Rectangle newRectangle = new Rectangle(4, 4);
+      Cube newCube = new Cube(newRectangle);
+    
+      int result = newCube.GetSurfaceArea();
+     
+      Assert.AreEqual(result, 96);
+    }
+
+  }  
+}
